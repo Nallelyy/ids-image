@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="ids-image">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `ids-image`
+     * componente de Imagen
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class IdsImage extends Polymer.Element {
+      static get is() { return 'ids-image'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'ids-image'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(IdsImage.is, IdsImage);
+  </script>
+</dom-module>
